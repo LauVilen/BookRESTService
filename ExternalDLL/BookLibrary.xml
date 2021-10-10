@@ -9,6 +9,7 @@
             Represents a book with a unique ISBN-13 number
             </summary>
         </member>
+        <!-- Badly formed XML comment ignored for member "P:BookLibrary.Book.ISBN13" -->
         <member name="P:BookLibrary.Book.Title">
             <summary>
             Gets or sets the title of the book as a string
@@ -24,24 +25,15 @@
             Gets or sets the number of pages in the book as an integer
             </summary>
         </member>
-        <member name="P:BookLibrary.Book.ISBN13">
-            <summary>
-            Gets or sets the ISBN-13 number of the book as a string
-            </summary>
-        </member>
-        <member name="M:BookLibrary.Book.#ctor">
-            <summary>
-            Creates an instance of a book with an empty constructor
-            </summary>
-        </member>
-        <member name="M:BookLibrary.Book.#ctor(System.String,System.String,System.Int32,System.String)">
+        <!-- Badly formed XML comment ignored for member "M:BookLibrary.Book.#ctor" -->
+        <member name="M:BookLibrary.Book.#ctor(System.String,System.String,System.String,System.Int32)">
             <summary>
             Creates an instance of a book with four parameters to set Title, Author, Number of Pages and the ISBN number
             </summary>
+            <param name="isbn13"></param>
             <param name="title"></param>
             <param name="author"></param>
             <param name="numberOfPages"></param>
-            <param name="isbn13"></param>
         </member>
     </members>
 </doc>

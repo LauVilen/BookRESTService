@@ -10,46 +10,46 @@ using BookLibrary;
 
 namespace BookRESTService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
-    public class BookController : ControllerBase
+    public class BooksController : ControllerBase
     {
-        private readonly BookManager _manager = new BookManager();
+        private readonly BooksManager _manager = new BooksManager();
         
 
-        // GET: api/<BookController>
+        // GET: <BooksController>
         [HttpGet]
         public IEnumerable<Book> Get()
         {
             return _manager.GetAll();
         }
 
-        // GET api/<BookController>/5
-        [HttpGet("{id}")]
+        // GET <BooksController>/5
+        [HttpGet("{isbn13}")]
         public Book Get(string isbn13)
         {
-            return _manager.GetById(isbn13);
+            return _manager.GetByISBN(isbn13);
         }
 
-        // POST api/<BookController>
+        // POST <BooksController>
         [HttpPost]
         public Book Post([FromBody] Book book)
         {
             return _manager.Add(book);
         }
 
-        // PUT api/<BookController>/5
-        [HttpPut("{id}")]
-        public Book Put(string isbn, [FromBody] Book updateBook)
+        // PUT <BooksController>/5
+        [HttpPut("{isbn13}")]
+        public Book Put(string isbn13, [FromBody] Book updateBook)
         {
-            return _manager.Update(isbn, updateBook);
+            return _manager.Update(isbn13, updateBook);
         }
 
-        // DELETE api/<BookController>/5
-        [HttpDelete("{id}")]
-        public Book Delete(string isbn)
+        // DELETE <BooksController>/5
+        [HttpDelete("{isbn13}")]
+        public Book Delete(string isbn13)
         {
-            return _manager.Delete(isbn);
+            return _manager.Delete(isbn13);
         }
     }
 }
